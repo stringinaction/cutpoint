@@ -7,6 +7,7 @@ package com.weib.concert;
 
 import com.weib.concert.beans.Performance;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  *
@@ -17,6 +18,7 @@ public class Director {
     private Performance performance;
     
     @Autowired
+    @Qualifier("play")
     public void setPerformance(Performance performance){
         this.performance = performance;
     }

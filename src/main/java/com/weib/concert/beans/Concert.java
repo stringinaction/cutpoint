@@ -5,6 +5,7 @@
  */
 package com.weib.concert.beans;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
  * @author zhangjingwei
  */
 @Component
+@Qualifier("concert")
 public class Concert implements Performance {
 
     @Override
