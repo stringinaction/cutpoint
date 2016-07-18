@@ -22,12 +22,12 @@ public class AnotherAudience {
     @Around("performance()")
     public void watchPerformance(ProceedingJoinPoint jp){
         try{
-            System.out.println("================Silencing cell phones");
-            System.out.println("================Take seats");
+            System.out.println("######################Silencing cell phones");
+            System.out.println("######################Take seats");
             jp.proceed();
-            System.out.println("================CLAP CLAP CLAP");
+            System.out.println("######################CLAP CLAP CLAP");
         }catch(Throwable e){
-            System.out.println("================Demanding a refund");
+            System.out.println("######################Demanding a refund");
         }
     }
 }

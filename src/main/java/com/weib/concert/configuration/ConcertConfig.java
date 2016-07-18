@@ -21,13 +21,13 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 @ComponentScan(basePackages={"com.weib.concert.beans"})
 public class ConcertConfig {
-//    @Bean
-//    public Audience audience(){
-//        return new Audience();
-//    }
+    @Bean
+    public Audience audience(){
+        return new Audience();
+    }
     
     @Bean
-    public AnotherAudience audience(){
+    public AnotherAudience anotherAudience(){
         return new AnotherAudience();
     }
     
