@@ -6,6 +6,7 @@
 package com.weib.concert.configuration;
 
 import com.weib.concert.Director;
+import com.weib.concert.pointcut.AnotherAudience;
 import com.weib.concert.pointcut.Audience;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,9 +21,14 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 @ComponentScan(basePackages={"com.weib.concert.beans"})
 public class ConcertConfig {
+//    @Bean
+//    public Audience audience(){
+//        return new Audience();
+//    }
+    
     @Bean
-    public Audience audience(){
-        return new Audience();
+    public AnotherAudience audience(){
+        return new AnotherAudience();
     }
     
     @Bean
