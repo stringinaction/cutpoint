@@ -5,6 +5,7 @@
  */
 package com.weib.concert;
 
+import com.weib.concert.beans.Performance;
 import com.weib.concert.configuration.CDConfig;
 import com.weib.concert.configuration.ConcertConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -17,14 +18,20 @@ public class ConcertMain {
     
     public static void main(String[] args){
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConcertConfig.class);
-        Director director = context.getBean(Director.class);
-        director.perform();
+//        Director director = context.getBean(Director.class);
+//        director.perform();
+        Performance performance = (Performance) context.getBean("concert"); //仍然可以直接调用Bean 与Qualifier无关
+        performance.perform();
+        
+        Performance performance2 = (Performance) context.getBean("play"); //仍然可以直接调用Bean 
+        performance2.perform();
         context.close();
         
         AnnotationConfigApplicationContext cdContext = new AnnotationConfigApplicationContext(CDConfig.class);
         CDPlayer cdplayer = cdContext.getBean(CDPlayer.class);
         cdplayer.playAll();
         cdplayer.playShuffle();
+        
         cdContext.close();
     }
 }
