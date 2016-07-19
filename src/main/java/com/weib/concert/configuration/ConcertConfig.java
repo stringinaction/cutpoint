@@ -8,6 +8,7 @@ package com.weib.concert.configuration;
 import com.weib.concert.Director;
 import com.weib.concert.pointcut.AnotherAudience;
 import com.weib.concert.pointcut.Audience;
+import com.weib.concert.pointcut.EncoreableIntroducer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +30,11 @@ public class ConcertConfig {
     @Bean
     public AnotherAudience anotherAudience(){
         return new AnotherAudience();
+    }
+    
+    @Bean
+    public EncoreableIntroducer encoreableIntroducer(){
+        return new EncoreableIntroducer();
     }
     
     @Bean
