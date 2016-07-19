@@ -15,4 +15,4 @@
 
 @EnableAspectJAutoProxy   在Config中声明切点为自动代理
 
-
+@DeclareParents(value="com.weib.concert.beans.Performance+",  defaultImpl=PerformanceEncoreable.class) 
