@@ -5,6 +5,7 @@
  */
 package com.weib.concert;
 
+import com.weib.concert.configuration.CDConfig;
 import com.weib.concert.configuration.ConcertConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -19,5 +20,11 @@ public class ConcertMain {
         Director director = context.getBean(Director.class);
         director.perform();
         context.close();
+        
+        AnnotationConfigApplicationContext cdContext = new AnnotationConfigApplicationContext(CDConfig.class);
+        CDPlayer cdplayer = cdContext.getBean(CDPlayer.class);
+        cdplayer.playAll();
+        cdplayer.playShuffle();
+        cdContext.close();
     }
 }
