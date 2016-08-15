@@ -8,7 +8,7 @@ package com.weib.concert.configuration;
 import com.weib.concert.Director;
 import com.weib.concert.pointcut.AnotherAudience;
 import com.weib.concert.pointcut.Audience;
-import com.weib.concert.pointcut.EncoreableIntroducer;
+import com.weib.concert.pointcut.ifex.EncoreableIntroducer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

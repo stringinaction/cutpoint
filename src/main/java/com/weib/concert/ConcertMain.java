@@ -8,7 +8,7 @@ package com.weib.concert;
 import com.weib.concert.beans.Performance;
 import com.weib.concert.configuration.CDConfig;
 import com.weib.concert.configuration.ConcertConfig;
-import com.weib.concert.pointcut.Encoreable;
+import com.weib.concert.pointcut.ifex.Encoreable;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
